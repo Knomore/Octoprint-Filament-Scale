@@ -6,9 +6,20 @@ You will need an HX711 breakout board and a compatible load cell. You can find t
 
 See here for instructions on wiring up the load cell: https://tutorials-raspberrypi.com/digital-raspberry-pi-scale-weight-sensor-hx711/
 
+The four cables of the Load Cell must be connected to the weight sensor. The green HX711, however, has six connections, of which we only need four for the cables. The connection is as follows:
+Red: E+
+Black: E-
+Green: A-
+White: A+
+The pins labeled B+/B- remain empty. Apparently there are versions of the sensor. Where the pins are labeled S+/S- instead of A+/A-.
+Now you just have to connect the sensor to the Raspberry Pi. Since this also has only four connections, the wiring is quite simple:
+VCC to Raspberry Pi Pin 2 (5V)
+GND to Raspberry Pi Pin 6 (GND)
+DT (data) to Raspberry Pi Pin 38 (GPIO 20)
+SCK (clock) to Raspberry Pi Pin 40 (GPIO 21)
+
 This plugin assumes you connected the data pin to GPIO20, and the clock pin to GPIO21.
 
-You will also need the bracket to connect the load cell to your printer: https://www.thingiverse.com/thing:3037926
 
 ## Setup
 
